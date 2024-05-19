@@ -1,4 +1,0 @@
-package stack
-
-import "testing"
-
