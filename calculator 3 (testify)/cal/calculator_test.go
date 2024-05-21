@@ -28,7 +28,8 @@ func TestDivide(t *testing.T) {
 			exp := i.excepted
 
 			gotAns, gotError := Divide(i.a, i.b)
-
+			
+			
 			assert.Equal(i.exceptedError, gotError)
 			assert.Equal(gotAns, exp)
 		})
