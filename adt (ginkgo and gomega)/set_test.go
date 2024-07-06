@@ -34,6 +34,17 @@ var _ = Describe("Set", func() {
 				By("Empty set will return 0", func() {
 					Expect(set.Size()).To(BeZero())
 				})
+
+				By("Adding one element", func() {
+					set.Add("Kutta")
+
+					Expect(set.Size()).To(Equal(1))
+				})
+
+				By("Adding another element", func() {
+					set.Add("Billi")
+					Expect(set.Size()).To(Equal(2))
+				})
 			})
 		})
 	})
