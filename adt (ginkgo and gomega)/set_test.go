@@ -7,11 +7,16 @@ import (
 	// "github.com/1shubham7/testing-e2e/adt"
 )
 
+var set *Set
 var _ = Describe("Set", func() {
+
+	BeforeEach(func(){
+		set = NewSet()
+	})
 	Describe("Emptiness", func() {
 		Context("When the set does not contain item", func() {
 			It("should be empty", func(){
-				set := NewSet()
+				// set := NewSet()
 
 				Expect(set.IsEmpty()).To(BeTrue())
 			})
@@ -19,7 +24,7 @@ var _ = Describe("Set", func() {
 
 		Context("When the set contains items", func(){
 			It("Should not be empty", func(){
-				set := NewSet()
+				// set := NewSet()
 				set.Add("Red")
 				Expect(set.IsEmpty()).To(BeFalse())
 			})
@@ -29,7 +34,7 @@ var _ = Describe("Set", func() {
 	Describe("Size", func(){
 		Context("As Items are added", func(){
 			It("It should return size of set", func(){
-				set := NewSet()
+				// set := NewSet()
 
 				By("Empty set will return 0", func() {
 					Expect(set.Size()).To(BeZero())
